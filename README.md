@@ -134,5 +134,16 @@ def comprehension_read():
 
     print([letter for letter in "pYthON" if letter.isupper()])
     print({len(w) for w in ["its", "the", "remix", "to", "ignition"]})
-
+def comprehension_write():
+    arr = [0, 1, 2, 3]
+    print([2 * num + 1 for num in arr])
+    arr = [3, 5, 9, 8]
+    print([num % 3 == 0 for num in arr])
+    arr = ["TA_sam", "TA_guido", "student_poohbear", "student_htiek"]
+    print([name[3:] for name in arr if name.startswith('TA_')]) 
+    arr = ['apple', 'orange', 'pear']
+    print([fruit[0].upper() for fruit in arr])
+    print([fruit for fruit in arr if 'p' in fruit])
+    print([(fruit, len(fruit)) for fruit in arr])
+    print({fruit:len(fruit) for fruit in arr})
 
