@@ -147,3 +147,24 @@ def comprehension_write():
     print([(fruit, len(fruit)) for fruit in arr])
     print({fruit:len(fruit) for fruit in arr})
 
+```
+## FUNCTIONS
+```
+def print_two(a, b):
+    print("Arguments: {0} and {1}".format(a, b))
+    
+    print_two(4, 1, b=1)    # invalid,  multiple values for 'b'
+    print_two(1, a=1)       # invalid,  multiple values for 'a'
+    print_two(b=1, a=4)     # valid
+    print_two(a=4, b=1)     # valid
+    print_two(b=4,1)        # invalid, 
+    print_two(4, 1, 1)      # invalid, 3 positional args instead of 2
+    print_two(4, a=1)       # invalid,  multiple values for 'a'
+    print_two(a=4, 1)       # invalid
+    print_two(41)           # invalid
+    print_two(4, 1)         # valid 
+    print_two()             # invalid
+
+    
+
+
