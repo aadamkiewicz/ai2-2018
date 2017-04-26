@@ -94,4 +94,45 @@ Hello, world!
 Temperature F? 212
 It is 100.0 degrees Celsius
 Temperature F? 
+```
+## DATA STRUCTURES
+```
+def object_reference ():
+    s = [0] * 3
+    s[0] += 1
+    print(s)  
+
+    s = [''] * 3
+    s[0] += 'a'
+    print(s)  
+
+    s = [[]] * 3
+    s[0] += [1]
+    print(s)
+
+def gcd(a, b):
+      while b:
+        a, b = b, a % b
+        return a
+def flip_dict(d):
+    out = {}
+    for key, value in d.items():
+        if value not in out:
+            out[value] = []
+        out[value].append(key)
+    return out
+
+def comprehension_read():
+    print([x for x in [1, 2, 3, 4]])
+    print([n - 2 for n in range(10)])
+    print([k % 10 for k in range(41) if k % 3 == 0])
+    print([s.lower() for s in ['PythOn', 'iS', 'cOoL'] if s[0] < s[-1]])
+
+    arr = [[3,2,1], ['a','b','c'], [('do',), ['re'], 'mi']]
+    print([el.append(el[0] * 4) for el in arr])  # => [None, None, None]
+    print(arr)
+
+    print([letter for letter in "pYthON" if letter.isupper()])
+    print({len(w) for w in ["its", "the", "remix", "to", "ignition"]})
+
 
